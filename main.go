@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	url := "http://169.254.169.254/latest/dynamic/instance-identity/document"
+	url := "http://179.254.169.254/latest/dynamic/instance-identity/document"
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
