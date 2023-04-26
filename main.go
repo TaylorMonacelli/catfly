@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"time"
 )
 
 func main() {
@@ -15,7 +16,10 @@ func main() {
 		panic(err)
 	}
 
-	client := &http.Client{}
+	client := &http.Client{
+		Timeout: 10 * time.Second,
+	}
+
 	resp, err := client.Do(req)
 	if err != nil {
 		panic(err)
